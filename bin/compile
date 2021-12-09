@@ -71,10 +71,10 @@ if [ -e $BUILD_DIR/.hugotheme ]; then
 fi
 
 # Build the site
-echo "\n-----> Building the site"
-cd $BUILD_DIR
-mkdir -p static
-./hugo --cleanDestinationDir --ignoreCache
+# echo "\n-----> Building the site"
+# cd $BUILD_DIR
+# mkdir -p static
+# ./hugo --cleanDestinationDir --ignoreCache
 
 # if the user has a script/post-hugo-build script, run that
 POST_BUILD_SCRIPT="$BUILD_DIR/script/post-hugo-build"
@@ -82,4 +82,3 @@ if [ -x "$POST_BUILD_SCRIPT" ]; then
   echo "\n-----> Running post-build script: $POST_BUILD_SCRIPT"
   $POST_BUILD_SCRIPT "$BUILD_DIR" "$CACHE_DIR" "$ENV_DIR"
 fi
-
