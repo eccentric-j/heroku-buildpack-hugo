@@ -36,7 +36,7 @@ mkdir -p $CACHE_DIR/$RELEASE_NAME
 tar -zxvf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 mkdir -p $BUILD_DIR/.heroku/hugo/bin
 mv $CACHE_DIR/hugo $BUILD_DIR/.heroku/hugo/bin/hugo
-echo "export PATH=\"$BUILD_DIR/.heroku/hugo/bin:\$PATH" > $BP_DIR/export
+echo "export PATH=\"$BUILD_DIR/.heroku/hugo/bin:\$PATH\"" > $BP_DIR/export
 
 # Export all of the user's ENV vars into this environment
 # See docs for what's going on here:
